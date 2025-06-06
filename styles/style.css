@@ -1,0 +1,110 @@
+/* Shared minimal, clean, responsive CSS for all pages */
+
+:root {
+  --primary: #2d3a4a;
+  --accent: #4e8cff;
+  --bg: #f7f9fb;
+  --white: #fff;
+  --border: #e0e6ed;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--primary);
+  min-height: 100vh;
+}
+
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 0 1.5rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.container {
+  max-width: 900px;
+  margin: 2.5rem auto 0 auto;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+  padding: 2rem 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.placeholder-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.placeholder-table th,
+.placeholder-table td {
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.placeholder-table th {
+  background: var(--bg);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem 1rem;
+    align-items: flex-start;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .container {
+    padding: 1rem 0.5rem;
+    margin: 1rem 0.5rem 0 0.5rem;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  .placeholder-table th,
+  .placeholder-table td {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.95rem;
+  }
+} 
